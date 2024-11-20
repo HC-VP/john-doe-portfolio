@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Accueil from './pages/accueil/Accueil';
 import Services from './pages/services/Services';
 import Realizations from './pages/realizations/Realizations';
@@ -11,13 +12,14 @@ const App = () => {
     <Router>
       <div>
         {/* Header component here */}
-        <Switch>
-          <Route path="/" exact component={Accueil} />
-          <Route path="/services" component={Services} />
-          <Route path="/realizations" component={Realizations} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/blog" component={Blog} />
-        </Switch>
+        <Routes>
+          {/* Use 'element' and pass JSX */}
+          <Route path="/" element={<Accueil />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/realizations" element={<Realizations />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+        </Routes>
         {/* Footer component here */}
       </div>
     </Router>
