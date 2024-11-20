@@ -6,22 +6,23 @@ import Services from './pages/services/Services';
 import Realizations from './pages/realizations/Realizations';
 import Contact from './pages/contact/Contact';
 import Blog from './pages/blog/Blog';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 
 const App = () => {
   return (
     <Router>
-      <div>
-        {/* Header component here */}
-        <Routes>
-          {/* Use 'element' and pass JSX */}
+      <Header />
+      <div>        
+        <Routes>          
           <Route path="/" element={<Accueil />} />
           <Route path="/services" element={<Services />} />
           <Route path="/realizations" element={<Realizations />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
-        </Routes>
-        {/* Footer component here */}
+        </Routes>        
       </div>
+      <Footer />
     </Router>
   );
 };

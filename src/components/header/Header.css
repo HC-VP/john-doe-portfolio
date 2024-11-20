@@ -1,0 +1,110 @@
+/* Header Styles */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #444;
+  color: white;
+  padding: 15px 20px;
+  position: relative;
+  z-index: 10; /* Ensure header is above other content */
+  transition: height 0.3s ease; /* Smooth transition for height change */
+  height: 80px; /* Default height for the header */
+}
+
+.logo a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  display: block;
+  padding-left: 20px;
+  z-index: 20; /* Ensure logo stays above the menu */
+  position: relative; /* Ensure logo stays above everything else */
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none; /* Hide by default */
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  z-index: 20; /* Ensure it's above other elements */
+}
+
+.hamburger-menu .line {
+  height: 3px;
+  background-color: white;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: #cde1f8;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex; /* Show hamburger icon on small screens */
+    position: absolute;
+    right: 20px; /* Align hamburger to the top-right corner */
+    top: 20px;
+  }
+
+  nav ul {
+    display: none; /* Hide the menu by default on mobile */
+    flex-direction: column;
+    background-color: #444;
+    position: fixed; /* Fixed position to fill the screen */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    margin: 0;
+    padding-top: 60px; /* Space for the logo */
+    z-index: 5; /* Ensure it’s above the content but behind the hamburger */
+  }
+
+  nav ul li {
+    margin: 20px 0;
+    text-align: left; /* Align text to the left */
+    padding-left: 20px; /* Add padding to align the links under the logo */
+  }
+
+  /* When the menu is active, expand it */
+  nav ul.active {
+    display: flex;
+  }
+
+  .header-container.active {
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 28px;
+    color: white;
+    z-index: 20; /* Ensure logo stays above the menu */
+  }
+}
+
