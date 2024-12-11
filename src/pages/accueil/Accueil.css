@@ -1,7 +1,7 @@
 /* Accueil Page Styles */
 .accueil-container {
   position: relative;
-  z-index: 1; /* Keep the main content below the header */
+  z-index: 1;
 }
 
 .background-image {
@@ -10,24 +10,54 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  z-index: -1; /* Keep it behind the content */
+  z-index: -1;
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.3); /* Black overlay */
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: -1; /* Keep it behind other content */
+  z-index: 1;
+}
+
+.hamburger-menu {
+  z-index: 20; /* Ensure it's above other elements, but title stays on top */
 }
 
 h1, h2 {
   margin: 0;
   padding: 10px;
 }
+
+h1 {
+  margin: 0;
+  padding: 10px;
+  color: white; /* Ensure title is white */
+  font-size: 2.5rem; /* Adjust the size as needed */
+  z-index: 10; /* Ensure the title is on top of other elements */
+  position: relative; /* Ensure it remains on top */
+}
+
+/* About Section Title Styling */
+h2 {
+  color: white; /* Make sure the text is white */
+  font-size: 2rem; /* Adjust the size as needed */
+  margin-top: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add a slight shadow for better readability */
+  z-index: 10; /* Ensure it stays on top of any other elements */
+}
+
+/* Additional Styles for Overlay */
+.overlay h2 {
+  color: white; /* Explicitly set text color */
+  font-size: 2rem; /* Adjust the size as needed */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add text shadow to improve readability */
+}
+
 
 .btn {
   background-color: #0d6efd;
@@ -47,29 +77,85 @@ h1, h2 {
   padding: 40px;
   background-color: #f8f9fa;
   text-align: center;
-}
-
-.about-photo img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .about-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 50px;
   margin-top: 30px;
 }
 
+.about-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
 .about-details {
-  margin-left: 20px;
+  max-width: 600px;
+  text-align: left;
 }
 
 h2, h3 {
   color: #1e1e1e;
 }
 
-.ProgressBar {
-  margin: 10px 0;
+.progress-bars {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
+
+.ProgressBar {
+  margin: 0;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+/* Mobile Version */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-photo {
+    margin-bottom: 20px;
+  }
+
+  .about-details {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .progress-bars {
+    margin-top: 10px;
+  }
+}
+
+/* Desktop Version */
+@media (min-width: 769px) {
+  .about-content {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .about-photo {
+    margin-bottom: 0;
+  }
+
+  .about-details {
+    max-width: 600px;
+    padding: 0;
+  }
+}
+
+

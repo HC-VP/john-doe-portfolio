@@ -7,15 +7,15 @@ const Realizations = () => {
       <h2>Portfolio</h2>
       <div className="projects">
         <div className="card">
-          <h3>Project 1</h3>
+          <h3>Fresh food</h3>
           <p>A brief description of the project.</p>
         </div>
         <div className="card">
-          <h3>Project 2</h3>
+          <h3>Restaurant Akira</h3>
           <p>A brief description of the project.</p>
         </div>
         <div className="card">
-          <h3>Project 3</h3>
+          <h3>Espace bien-être</h3>
           <p>A brief description of the project.</p>
         </div>
       </div>

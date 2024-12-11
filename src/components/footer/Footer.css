@@ -1,62 +1,133 @@
+/* Footer Styles */
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    background-color: #444;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+  padding: 20px 40px;
+  background-color: #444;
+  color: white;
+  text-align: left;
+  position: relative;
+}
+
+.footer-column {
+  flex: 1 1 220px;
+  margin: 5px;
+  text-align: left;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.footer-column p, .footer-column a {
+  color: #bbb;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.footer-column a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #0d6efd;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: flex-start;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #0d6efd;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.copyright {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #bbb;
+  display: flex;
+  flex-direction: column; /* Stack copyright and "Back to top" */
+  align-items: center; /* Center content on desktop */
+  text-align: center; /* Ensure text is centered */
+}
+
+.copyright a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px; /* Space between copyright and "Back to top" */
+}
+
+.copyright a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile version adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
     padding: 20px;
+    align-items: flex-start; /* Align all content to the left */
   }
-  
+
   .footer-column {
-    width: 23%;
+    text-align: left;
+    margin: 5px 0;
+    width: 100%;
   }
-  
-  .footer-column h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+
+  .social-links {
+    justify-content: flex-start;
+    margin-top: 10px;
   }
-  
+
   .footer-column ul {
-    list-style: none;
-    padding: 0;
+    text-align: left;
   }
-  
-  .footer-column ul li {
-    margin-bottom: 5px;
-  }
-  
-  .footer-column a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .footer-column a:hover {
-    color: #cde1f8;
-  }
-  
-  .social-links a {
-    margin-right: 10px;
-  }
-  
-  /* Footer responsive design for smaller screens */
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .footer-column {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  }
-  
+
   .copyright {
-    text-align: center;
-    margin-top: 20px;
+    justify-content: flex-start; /* Align copyright and "Back to top" to the left */
+    margin-top: 15px;
+    font-size: 0.8rem;
+    width: 100%; /* Take full width */
+    align-items: flex-start; /* Left-align in mobile */
   }
-  
+
   .copyright a {
-    color: #298eff;
-    text-decoration: none;
+    margin-top: 5px; /* Reduced space on mobile */
   }
-  
+}
+
+/* Desktop version adjustments */
+@media (min-width: 769px) {
+  .copyright {
+    justify-content: center; /* Center everything for desktop */
+    margin-top: 30px;
+    text-align: center;
+    align-items: center; /* Keep centered for desktop */
+  }
+}
