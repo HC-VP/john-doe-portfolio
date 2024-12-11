@@ -4,10 +4,11 @@
   justify-content: space-between;
   flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
   padding: 20px 40px;
-  background-color: #444;
-  color: white;
+  background-color: #EEE; /* Light background color for the main footer */
+  color: #444; /* Default text color for the footer */
   text-align: left;
   position: relative;
+  width: 100%; /* Ensure the footer spans the full width */
 }
 
 .footer-column {
@@ -18,12 +19,12 @@
 
 .footer-column h4 {
   font-size: 1.2rem;
-  color: white;
+  color: #444; /* Darker text for the titles */
   margin-bottom: 5px;
 }
 
 .footer-column p, .footer-column a {
-  color: #bbb;
+  color: #777; /* Lighter grey color for text links */
   font-size: 0.9rem;
   line-height: 1.3;
 }
@@ -45,7 +46,7 @@
 }
 
 .social-links a {
-  color: white;
+  color: #444; /* Dark icons */
   font-size: 1.5rem;
   transition: color 0.3s ease;
 }
@@ -64,15 +65,21 @@
   margin-bottom: 5px;
 }
 
+/* Copyright Section - Full Width with Dark Background */
 .copyright {
-  width: 100%;
+  width: 100vw; /* Full viewport width */
   margin-top: 20px;
   font-size: 0.9rem;
   color: #bbb;
+  background-color: #444; /* Dark background for the copyright section */
   display: flex;
   flex-direction: column; /* Stack copyright and "Back to top" */
   align-items: center; /* Center content on desktop */
   text-align: center; /* Ensure text is centered */
+  padding: 10px 0; /* Add padding for better spacing */
+  position: relative;
+  left: 50%; /* Shift the copyright back to the left edge of the page */
+  margin-left: -50vw; /* Offset the margin to cover the full width */
 }
 
 .copyright a {
@@ -113,8 +120,11 @@
     justify-content: flex-start; /* Align copyright and "Back to top" to the left */
     margin-top: 15px;
     font-size: 0.8rem;
-    width: 100%; /* Take full width */
+    width: 100%; /* Full width */
     align-items: flex-start; /* Left-align in mobile */
+    background-color: #444; /* Keep dark background for mobile */
+    left: 0;
+    margin-left: 0; /* Remove the offset on mobile */
   }
 
   .copyright a {
@@ -129,5 +139,6 @@
     margin-top: 30px;
     text-align: center;
     align-items: center; /* Keep centered for desktop */
+    background-color: #444; /* Keep dark background */
   }
 }
