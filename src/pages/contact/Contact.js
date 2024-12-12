@@ -1,41 +1,85 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Contact.css';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-  };
-
   return (
     <div className="contact-container">
-      <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} />
-        <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} />
-        <input type="tel" name="phone" placeholder="Your Phone" value={formData.phone} onChange={handleChange} />
-        <textarea name="message" placeholder="Your Message" value={formData.message} onChange={handleChange}></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      <div className="contact-info">
-        <p>Address: 123 John Doe St., City, Country</p>
-        <p>Phone: +123456789</p>
-        {/* Embed Google Map here */}
+      <div className="contact-form-wrapper">
+        <h2>ME CONTACTER</h2>
+        <h4>Pour me contacter en vue d'un entretien ou d'une future collaboration, merci de remplir le formulaire de contact</h4>
+        <h3>Formulaire de contact</h3>
+        <div className="contact-content">
+          {/* Contact Form */}
+          <div className="contact-form">
+            <div className="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Votre nom"
+              />
+              <label htmlFor="name">Votre nom</label>
+            </div>
+
+            <div className="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Votre adresse email"
+              />
+              <label htmlFor="email">Votre adresse email</label>
+            </div>
+
+            <div className="form-group">
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="Votre numéro de téléphone"
+              />
+              <label htmlFor="phone">Votre numéro de téléphone</label>
+            </div>
+
+            <div className="form-group">
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Sujet"
+              />
+              <label htmlFor="subject">Sujet</label>
+            </div>
+
+            <div className="form-group">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Votre message"
+              ></textarea>
+              <label htmlFor="message">Votre message</label>
+            </div>
+
+            <button type="submit">Envoyer</button>
+          </div>
+
+          {/* Contact Details */}
+          <div className="contact-details">
+            <h3>Mes coordonnées</h3>
+            <p>40 Rue Laure Diebold, 69009 Lyon, France</p>
+            <p>Téléphone: 06 20 30 40 50</p>
+            <div className="map">
+              <iframe
+                src="https://maps.google.com/maps?q=40%20Rue%20Laure%20Diebold,%2069009%20Lyon,%20France&output=embed"
+                title="Google Maps Location"
+                width="100%"
+                height="300"
+                frameBorder="0"
+                allowFullScreen=""
+              ></iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
