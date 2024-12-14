@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'; // Import icons from React Icons
 import './Footer.css';
 
@@ -30,7 +31,7 @@ const Footer = () => {
           <li><a href="/#about">A propos</a></li> 
           <li><a href="/services">Services</a></li>          
           <li><a href="/contact">Me contacter</a></li>
-          <li><a href="/Mentions">Mentions Légales</a></li>
+          <li><a href="/mentions">Mentions Légales</a></li>
         </ul>
       </div>
 
