@@ -27,34 +27,34 @@ const Footer = () => {
       <div className="footer-column">
         <h4>Liens utiles</h4>
         <ul>
-          <li><a href="/">Accueil</a></li>
-          <li><a href="/#about">A propos</a></li> 
-          <li><a href="/services">Services</a></li>          
-          <li><a href="/contact">Me contacter</a></li>
-          <li><a href="/mentions">Mentions Légales</a></li>
+          <li><a href="/"><i className="fas fa-chevron-right"></i>Accueil</a></li>  
+          <li><a href="/#about"><i className="fas fa-chevron-right"></i>A propos</a></li> 
+          <li><a href="/services"><i className="fas fa-chevron-right"></i>Services</a></li>          
+          <li><a href="/contact"><i className="fas fa-chevron-right"></i>Me contacter</a></li>
+          <li><a href="/mentions"><i className="fas fa-chevron-right"></i>Mentions Légales</a></li>
         </ul>
       </div>
 
       <div className="footer-column">
         <h4>Mes dernières réalisations</h4>
         <ul>
-          <li><a href="/realizations">Fresh food</a></li>
-          <li><a href="/realizations">Restaurant Akira</a></li>
-          <li><a href="/realizations">Espace bien-être</a></li>
+          <li><a href="/realizations"><i className="fas fa-chevron-right"></i>Fresh food</a></li>
+          <li><a href="/realizations"><i className="fas fa-chevron-right"></i>Restaurant Akira</a></li>
+          <li><a href="/realizations"><i className="fas fa-chevron-right"></i>Espace bien-être</a></li>
         </ul>
       </div>
 
       <div className="footer-column">
         <h4> Mes derniers articles</h4>
         <ul>
-          <li><a href="/blog">Coder son site en HTML/CSS</a></li>
-          <li><a href="/blog">Vendre ses produits sur le web</a></li>
-          <li><a href="/blog">Se positionner sur Google</a></li>
+          <li><a href="/blog"><i className="fas fa-chevron-right"></i>Coder son site en HTML/CSS</a></li>
+          <li><a href="/blog"><i className="fas fa-chevron-right"></i>Vendre ses produits sur le web</a></li>
+          <li><a href="/blog"><i className="fas fa-chevron-right"></i>Se positionner sur Google</a></li>
         </ul>
       </div>
 
       <div className="copyright">
-        <p>&copy; 2024 John Doe</p>
+        <p>&copy; Designed by John Doe</p>
         <a href="#top">Back to top</a>
       </div>
     </footer>

@@ -30,10 +30,11 @@ const MentionsLegales = () => {
             <div className="accordion-body">
                 <h5>John Doe</h5>
                 <p>                     
-                    40 Rue Laure Diebold <br />
-                    69009 Lyon, France <br />
-                    06 20 30 40 50 <br />
-                    john.doe@gmail.com
+                  <i className="fas fa-map-marker-alt"></i> 40 Rue Laure Diebold <br />
+                                                            69009 Lyon, France <br />
+                  <i className="fas fa-phone-alt"></i> 06 20 30 40 50 <br />
+                    
+                  <i className="fas fa-envelope"></i><a href="mailto:john.doe@gmail.com"> john.doe@gmail.com</a>
               </p>
             </div>
           </div>
@@ -67,7 +68,7 @@ const MentionsLegales = () => {
                 
                 {' '}
                 <a href="https://www.alwaysdata.com/" target="_blank" rel="noopener noreferrer">
-                www.alwaysdata.com
+                  <i className="fas fa-globe"></i> www.alwaysdata.com
                 </a>
               </p>
             </div>

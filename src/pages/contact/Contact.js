@@ -5,11 +5,14 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-form-wrapper">
-        <h2>ME CONTACTER</h2>
-        <h4>Pour me contacter en vue d'un entretien ou d'une future collaboration, merci de remplir le formulaire de contact</h4>
+        <h2>ME CONTACTER</h2>        
+        <h4>Pour me contacter en vue d'un entretien ou d'une future collaboration, merci de remplir le formulaire de contact</h4>  
+
+        <div className="underline"></div>
+        
         <h3>Formulaire de contact</h3>
         <div className="contact-content">
-          {/* Contact Form */}
+          
           <div className="contact-form">
             <div className="form-group">
               <input
@@ -63,7 +66,7 @@ const Contact = () => {
             <button type="submit">Envoyer</button>
           </div>
 
-          {/* Contact Details */}
+          
           <div className="contact-details">
             <h3>Mes coordonnées</h3>
             <p>40 Rue Laure Diebold, 69009 Lyon, France</p>

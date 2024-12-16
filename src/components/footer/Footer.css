@@ -5,7 +5,7 @@
   flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
   padding: 20px 40px;
   background-color: #EEE; /* Light background color for the main footer */
-  color: #444; /* Default text color for the footer */
+  color: #1e1e1e; /* Default text color for the footer */
   text-align: left;
   position: relative;
   width: 100%; /* Ensure the footer spans the full width */
@@ -18,21 +18,43 @@
 }
 
 .footer-column h4 {
-  font-size: 1.2rem;
-  color: #444; /* Darker text for the titles */
+  font-size: 1rem;
+  color: #1e1e1e; /* Darker text for the titles */
   margin-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 .footer-column p, .footer-column a {
-  color: #777; /* Lighter grey color for text links */
+  color: #1e1e1e; /* Lighter grey color for text links */
   font-size: 0.9rem;
   line-height: 1.3;
 }
 
+/* Style the links with arrows */
 .footer-column a {
   text-decoration: none;
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+  color: #1e1e1e;
+  font-size: 0.9rem;
   transition: color 0.3s ease;
 }
+
+.footer-column a i {
+  margin-right: 5px; /* Space between the arrow and the text */
+  color: #0d6efd; /* Blue color for the arrow */
+  transition: color 0.3s ease;
+}
+
+/* Change color on hover */
+.footer-column a:hover {
+  color: #0d6efd;
+}
+
+.footer-column a:hover i {
+  color: #0b5ed7; /* Darker blue for the arrow on hover */
+}
+
 
 .footer-column a:hover {
   color: #0d6efd;
@@ -46,7 +68,7 @@
 }
 
 .social-links a {
-  color: #444; /* Dark icons */
+  color: #1e1e1e; /* Dark icons */
   font-size: 1.5rem;
   transition: color 0.3s ease;
 }
@@ -71,7 +93,7 @@
   margin-top: 20px;
   font-size: 0.9rem;
   color: #bbb;
-  background-color: #444; /* Dark background for the copyright section */
+  background-color: #1e1e1e; /* Dark background for the copyright section */
   display: flex;
   flex-direction: column; /* Stack copyright and "Back to top" */
   align-items: center; /* Center content on desktop */
@@ -122,7 +144,7 @@
     font-size: 0.8rem;
     width: 100%; /* Full width */
     align-items: flex-start; /* Left-align in mobile */
-    background-color: #444; /* Keep dark background for mobile */
+    background-color: #1e1e1e; /* Keep dark background for mobile */
     left: 0;
     margin-left: 0; /* Remove the offset on mobile */
   }
@@ -139,6 +161,6 @@
     margin-top: 30px;
     text-align: center;
     align-items: center; /* Keep centered for desktop */
-    background-color: #444; /* Keep dark background */
+    background-color: #1e1e1e; /* Keep dark background */
   }
 }
