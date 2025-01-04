@@ -4,9 +4,10 @@ import './Realizations.css';
 const Realisations = () => {
   return (
     <div className="realisations-container">
-      <h1>Portfolio</h1>
-      <div className="underline"></div>
+      <h1>PORTFOLIO</h1>
+      
       <p>Voici quelques-unes de mes réalisations.</p>
+      <div className="underline"></div>
       
       <div className="row">
         {/* First Project Card */}

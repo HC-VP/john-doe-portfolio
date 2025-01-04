@@ -5,8 +5,10 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-form-wrapper">
+      <div className="contact-form-title">
+        
         <h2>ME CONTACTER</h2>        
-        <h4>Pour me contacter en vue d'un entretien ou d'une future collaboration, merci de remplir le formulaire de contact</h4>  
+        <h4>Pour me contacter en vue d'un entretien ou d'une future collaboration, merci de remplir le formulaire de contact.</h4>  
 
         <div className="underline"></div>
         
@@ -69,8 +71,8 @@ const Contact = () => {
           
           <div className="contact-details">
             <h3>Mes coordonnées</h3>
-            <p>40 Rue Laure Diebold, 69009 Lyon, France</p>
-            <p>Téléphone: 06 20 30 40 50</p>
+            <p><i className="fas fa-map-marker-alt"></i> 40 Rue Laure Diebold, 69009 Lyon, France</p>
+            <p><i className="fas fa-phone-alt"></i> 06 20 30 40 50</p>
             <div className="map">
               <iframe
                 src="https://maps.google.com/maps?q=40%20Rue%20Laure%20Diebold,%2069009%20Lyon,%20France&output=embed"
@@ -82,6 +84,7 @@ const Contact = () => {
               ></iframe>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>

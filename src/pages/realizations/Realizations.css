@@ -6,18 +6,21 @@
   .realisations-container h1 {
     font-size: 2rem;
     color: #333;
+    margin-bottom: 10px;
   }
   
   .realisations-container p {
     font-size: 1.2rem;
     color: #777;
+    
   }
   
   .underline {
     width: 80px;
     height: 2px;
     background-color: #007bff;
-    margin: 20px auto;
+    
+    
   }
   
   .card-footer {
