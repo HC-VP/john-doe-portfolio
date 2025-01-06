@@ -1,8 +1,7 @@
 import React from 'react';
-import { ProgressBar } from 'react-bootstrap';
-import './Accueil.css'; // Custom CSS for homepage
+import './Accueil.css';
 
-const Accueil = () => {
+function Accueil() {
   return (
     <div className="accueil-container">
       <div className="background-image">
@@ -12,28 +11,60 @@ const Accueil = () => {
           <a href="#about" className="btn">En savoir plus</a>
         </div>
       </div>
-
-      {/* About Section */}
-      <div id="about" className="about-container">
-        <h2>A propos</h2>
+      <div className="about-container" id="about">
         <div className="about-content">
-          <div className="about-photo">
-            <img src="/images/john-doe-about.jpg" alt="John Doe" />
-          </div>
           <div className="about-details">
-            <p>Passionné par l'informatique et les nouvelles technologies, j'ai suivi une formation d'intégrateur-développeur web au CEF. Au cours de cette formation, j'ai pu acquérir des bases solides pour travailler dans le domaine du développement web.</p>
-            <h3>Skills</h3>
+            <h3>À propos</h3>
+            <div className="line"></div>
+
+            <p>Passionné par l'informatique et les nouvelles technologies, j'ai suivi une formation <strong>d'intégrateur-développeur web</strong> au CEF. Au cours de cette formation, j'ai pu acquérir des bases solides pour travailler dans le domaine du <strong>développement web</strong>.</p>
+            
+            <p>Basé à Lyon, je suis en recherche d'une alternance au sein d'une agence digitale pour consolider ma formation de <strong>développeur web full stack</strong></p>
+            
+            <p>J'accorde une attention particulière à la qualité du code que j'écris et je respecte les bonnes pratiques du web</p>
+          </div>
+
+          <div className='column'>
+
+            
+
+            <div className="about-photo">
+              <img src="/images/john-doe-about.jpg" alt="John Doe" />
+            </div>
+
+            
+              <h3>Mes compétences</h3>
+            
+            
             <div className="progress-bars">
-              <ProgressBar now={90} label="HTML5" />
-              <ProgressBar now={80} label="CSS3" />
-              <ProgressBar now={70} label="JavaScript" />
-              <ProgressBar now={60} label="React.js" />
+              <div className="ProgressBar">
+                <h4>HTML5 90%</h4>
+              <div className="progress" style={{ width: '90%', backgroundColor: '#d9534f' }}></div>
+            </div>
+            <div className="ProgressBar">
+              <h4>CSS3 80%</h4>
+              <div className="progress" style={{ width: '80%', backgroundColor: '#5bc0de' }}></div>
+            </div>
+            <div className="ProgressBar">
+              <h4>JavaScript 70%</h4>
+              <div className="progress" style={{ width: '70%', backgroundColor: '#f0ad4e' }}></div>
+            </div>
+            <div className="ProgressBar">
+              <h4>PHP 60%</h4>
+              <div className="progress" style={{ width: '60%', backgroundColor: '#5bc0de' }}></div>
+            </div>
+            <div className="ProgressBar">
+              <h4>React 50%</h4>
+              <div className="progress" style={{ width: '50%', backgroundColor: '#0275d8' }}></div>
             </div>
           </div>
+          
+          
         </div>
       </div>
     </div>
+  </div>
   );
-};
+}
 
 export default Accueil;
