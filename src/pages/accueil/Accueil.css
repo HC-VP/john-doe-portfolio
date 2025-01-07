@@ -65,13 +65,7 @@ h2 {
 
 
 
-.about-photo {
-  border-radius: 15px;
-  max-width: auto;
-  height: auto;
-  object-fit: cover;
-  
-}
+
 
 .line {
   width: 100%;
@@ -86,6 +80,22 @@ h2 {
   font-size: 1.25rem;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column h3 {
+  margin-top: 15px;
+}
+
+.about-photo {
+  border-radius: 15px;
+  max-width: auto;
+  height: auto;
+  object-fit: cover;
+  
+}
 
 /* Skill Bar Styling */
 .progress-bars {

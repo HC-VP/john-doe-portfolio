@@ -1,9 +1,29 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import './Contact.css';
 
 const Contact = () => {
   return (
     <div className="contact-container">
+      <Helmet>
+        <title>Contact - John Doe Portfolio</title>
+        <meta
+          name="description"
+          content="Get in touch with John Doe for potential collaborations, projects, or inquiries."
+        />
+        <meta
+          name="keywords"
+          content="contact, John Doe, collaboration, web development, inquiries"
+        />
+        <meta property="og:title" content="Contact - John Doe Portfolio" />
+        <meta
+          property="og:description"
+          content="Reach out to John Doe for collaborations, web development projects, or general inquiries."
+        />
+        <meta property="og:image" content="/images/contact-bg.jpg" />
+        <meta property="og:url" content="https://john-doe-portfolio.com/contact" />
+      </Helmet>
+
       <div className="contact-form-wrapper">
       <div className="contact-form-title">
         

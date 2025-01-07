@@ -1,9 +1,33 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import './Realizations.css';
 
 const Realisations = () => {
   return (
     <div className="realisations-container">
+
+      <Helmet>
+        <title>Realizations - John Doe Portfolio</title>
+        <meta
+          name="description"
+          content="View John Doe's web development projects and portfolio, showcasing skills in React, JavaScript, and more."
+        />
+        <meta
+          name="keywords"
+          content="portfolio, projects, web development, JavaScript, React"
+        />
+        <meta property="og:title" content="Realizations - John Doe Portfolio" />
+        <meta
+          property="og:description"
+          content="Explore John Doe's web development projects and portfolio, including full-stack web applications."
+        />
+        <meta property="og:image" content="/images/blog/technos.png" />
+        <meta property="og:url" content="https://john-doe-portfolio.com/realizations" />
+      </Helmet>
+
+
+
+
       <h1>PORTFOLIO</h1>
       
       <p>Voici quelques-unes de mes réalisations.</p>

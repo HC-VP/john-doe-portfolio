@@ -1,10 +1,32 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import './Services.css';
 
 const Services = () => {
   return (
     
     <div className="services-container">
+
+      <Helmet>
+        <title>Services - John Doe Portfolio</title>
+        <meta
+          name="description"
+          content="Discover the services offered by John Doe in web development, full-stack solutions, and more."
+        />
+        <meta
+          name="keywords"
+          content="services, web development, full-stack, John Doe, React"
+        />
+        <meta property="og:title" content="Services - John Doe Portfolio" />
+        <meta
+          property="og:description"
+          content="Explore the web development services offered by John Doe, including React, JavaScript, full-stack solutions."
+        />
+        <meta property="og:image" content="/images/blog/google.jpg" />
+        <meta property="og:url" content="https://john-doe-portfolio.com/services" />
+      </Helmet>
+
+
       
       <div className="services-image">
         <img src="/images/banner.jpg" alt="Services Banner" />

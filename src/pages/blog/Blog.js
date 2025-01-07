@@ -1,11 +1,30 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import './Blog.css';
 
 const Blog = () => {
   return (
     <div className="blog-container">
 
-      {/* Blog image */}
+      <Helmet>
+        <title>Blog - John Doe Portfolio</title>
+        <meta
+          name="description"
+          content="Explore John Doe's blog, covering web development topics, tutorials, and tech trends."
+        />
+        <meta
+          name="keywords"
+          content="web development, JavaScript, React, coding, tutorials, blog"
+        />
+        <meta property="og:title" content="Blog - John Doe Portfolio" />
+        <meta
+          property="og:description" content="Learn from John Doe's blog, covering web development, JavaScript, React tutorials, and more."
+        />
+        <meta property="og:image" content="/images/blog/coder.jpg" />
+        <meta property="og:url" content="https://john-doe-portfolio.com/blog" />
+      </Helmet>
+
+      
       <div className="blog-image">
         <img src="/images/banner.jpg" alt="Blog Banner" />
       </div>

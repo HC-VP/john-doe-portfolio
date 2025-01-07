@@ -1,9 +1,19 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import './Accueil.css';
 
 function Accueil() {
   return (
     <div className="accueil-container">
+      <Helmet>
+        <title>John Doe Portfolio</title>
+        <meta name="description" content="Welcome to John Doe's portfolio showcasing web development skills." />
+        <meta name="keywords" content="portfolio, web development, John Doe, React, JavaScript, HTML, CSS" />
+        <meta property="og:title" content="John Doe Portfolio" />
+        <meta property="og:description" content="John Doe's personal portfolio showcasing web development skills and projects." />
+        <meta property="og:image" content="/images/hero-bg.jpg" />
+        <meta property="og:url" content="https://john-doe-portfolio.com" />
+      </Helmet>
       <div className="background-image">
         <div className="overlay">
           <h1>Bonjour, je suis John Doe</h1>
